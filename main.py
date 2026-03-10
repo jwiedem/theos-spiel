@@ -29,12 +29,12 @@ while True:
 
     # wenn links Pfeil gedrückt
     if keys[pygame.K_LEFT]:
-        # x -= speed ist (fast) das selbe wie x = x - speed, zieht also speed (5) von x ab -> bewegt Objekt nach links
+        # x -= speed ist das selbe wie x = x - speed, zieht also speed (5) von x ab -> bewegt Objekt nach links
         x -= speed
 
     # wenn rechts Pfeil gedrückt
     if keys[pygame.K_RIGHT]:
-        # x += speed ist (fast) das selbe wie x = x + speed, fügt also speed (5) zu x hinzu -> bewegt Objekt nach rechts
+        # x += speed ist das selbe wie x = x + speed, fügt also speed (5) zu x hinzu -> bewegt Objekt nach rechts
         x += speed
 
     if keys[pygame.K_UP]:
