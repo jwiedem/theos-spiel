@@ -57,3 +57,6 @@ while True:
 
     # mache, dass das Spiel weiter macht (wichtig, wenn andere Objekte sich unabhängig bewegen oder erscheinen, z.B. Früchte alle 10 sec)
     clock.tick(60)
+
+
+    # Aufgabe: verhindere, dass das Viereck aus dem Bild verschwindet
