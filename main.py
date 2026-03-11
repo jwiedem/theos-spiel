@@ -4,8 +4,9 @@ import sys
 pygame.init()
 
 # definiert Höhe und Breite des neuen Fensters
-width, height = 800, 700
-obj_width, obj_height = 1, 100
+width, height = 1900, 990
+obj_width, obj_height = 50, 50
+obj_width1, obj_height1 = 40, 40
 screen = pygame.display.set_mode((width, height))
 pygame.display.set_caption("Theos Spiel")
 
@@ -61,7 +62,7 @@ while True:
     # zeichne auf dem Bildschirm ein Viereck
     # genauer: pygame zeichnet -> was? ein Rechteck, was für ein Rechteck:
     # erster Parameter: auf welcher Fläche, zweiter Parameter: Farbe, dritter Parameter: wo auf der Fläche (bei x, y) und wie groß ist das Rechteck)
-    pygame.draw.rect(screen, (0,255,0), (x,y,obj_width, obj_height))
+    pygame.draw.rect(screen, (0,255,0), rechteck_1 = (x,y,obj_width, obj_height))
 
     # update um die Änderungen auch zu zeigen
     pygame.display.update()
@@ -69,19 +70,18 @@ while True:
     # mache, dass das Spiel weiter macht (wichtig, wenn andere Objekte sich unabhängig bewegen oder erscheinen, z.B. Früchte alle 10 sec)
     clock.tick(60)
 
-    #while x > 750:
-        #speed = 0
-        #x = 745
-    #while x < 5:
-        #speed = 0
-        #x = 10
-    #while y > 550:
-        #speed = 0
-        #y = 545
-    #while y < 5:
-        #speed = 0
-        #y = 10
-    #speed = 5
+
+#while True:
+   # pygame.draw.rect(screen, (255, 0, 0), apple=(x, y, obj_width1, obj_height1))
+   # if rechteck_1 is = apple
+
+
+
+
+
+
+
+
 
 
 
