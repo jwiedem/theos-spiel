@@ -1,3 +1,5 @@
+from operator import delitem
+
 import pygame
 import sys
 
@@ -71,18 +73,12 @@ while True:
     clock.tick(60)
 
 
-#while True:
-   # pygame.draw.rect(screen, (255, 0, 0), apple=(x, y, obj_width1, obj_height1))
-   # if rechteck_1 is = apple
 
 
+while True:
+   pygame.draw.rect(screen, (255, 0, 0), apple(x, y, obj_width1, obj_height1))
+   if rechteck_1 is = apple
+       delitem(apple)
+        wait 10:
+        pygame.draw.rect(screen, (255, 0, 0), apple(x, y, obj_width1, obj_height1))
 
-
-
-
-
-
-
-
-
-    # Aufgabe: verhindere, dass das Viereck aus dem Bild verschwindet
