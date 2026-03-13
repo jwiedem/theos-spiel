@@ -36,7 +36,7 @@ green = (0, 255, 0)
 black = (0, 0, 0)
 
 clock = pygame.time.Clock()
-
+apfel = Apple(width, height)
 while True:
     # Anfang Schleife
     # überprüft solange True (also immer) was für ein Ereignis passiert
@@ -85,17 +85,22 @@ while True:
 
 
     #variable vorher definieren und dann benutzen (du gibst dem Rechteck einen Namen), dann keine orangene linie
-    spieler = (x, y, obj_width, obj_height)
+    spieler = pygame.Rect(x, y, obj_width, obj_height)
     pygame.draw.rect(screen, green, spieler)
 
-    apfel = Apple(width, height)
+
+    if spieler.colliderect(apfel.rect()):
+        apfel.spawn()
+
+
+
     apfel.draw(screen,red)
 
     # update um die Änderungen auch zu zeigen
     pygame.display.update()
 
     # mache, dass das Spiel weiter macht (wichtig, wenn andere Objekte sich unabhängig bewegen oder erscheinen, z.B. Früchte alle 10 sec)
-    clock.tick(60)
+    clock.tick(120)
 
 
 
