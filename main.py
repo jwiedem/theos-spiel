@@ -5,6 +5,8 @@ import sys
 
 from pygame.draw import rect
 
+from Apple import Apple
+
 pygame.init()
 
 # definiert Höhe und Breite des neuen Fensters, diesmal auf die Bildschirmgröße
@@ -86,8 +88,8 @@ while True:
     spieler = (x, y, obj_width, obj_height)
     pygame.draw.rect(screen, green, spieler)
 
-    apple = (apple_x, apple_y, apple_width, apple_height)
-    pygame.draw.rect(screen, red, apple)
+    apfel = Apple(width, height)
+    apfel.draw(screen,red)
 
     # update um die Änderungen auch zu zeigen
     pygame.display.update()
