@@ -12,8 +12,9 @@ pygame.init()
 # definiert Höhe und Breite des neuen Fensters, diesmal auf die Bildschirmgröße
 info = pygame.display.Info()
 width, height = info.current_w, info.current_h
+font = pygame.font.SysFont(None, 40)
 
-
+score = 0
 base = min(width, height)
 
 obj_width = obj_height = base // 40
@@ -90,9 +91,11 @@ while True:
 
 
     if spieler.colliderect(apfel.rect()):
+        score += 1
         apfel.spawn()
 
-
+    score_text = font.render("Score: " + str(score), True, (255, 255, 255))
+    screen.blit(score_text, (20, 20))
 
     apfel.draw(screen,red)
 
